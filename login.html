@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -25,44 +25,24 @@
                 </div>
             </nav>
         </header>
-        <div class="content-wrapper index">
+        <div class="content-wrapper login">
             <div class="logo-wrapper">
                 <img src="https://cdn.jsdelivr.net/gh/Panxuc/FakeLambdaOJ2@latest/assets/img/logo_long.png"
                     class="logo-long">
             </div>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>题目</th>
-                            <th>通过率</th>
-                            <th>截止日期</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <a href="/login.html" class="">1001</a>
-                            </td>
-                            <td>
-                                <a href="/login.html" class="">A + B Problem</a>
-                            </td>
-                            <td>10.66%</td>
-                            <td>2017-10-10 23:59:00</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="/login.html" class="">1002</a>
-                            </td>
-                            <td>
-                                <a href="/login.html" class="">The Nth Number in Fibonacci Sequence</a>
-                            </td>
-                            <td>11.11%</td>
-                            <td>2017-09-22 23:59:00</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="login-form-wrapper">
+                <div class="error" style="display: none;">用户名或密码错误</div>
+                <form model="[object Object]" class="login-form">
+                    <div class="row">
+                        <input name="username" type="text" placeholder="用户名" data-vv-id="_bxhgmgxyn"
+                            aria-required="true" aria-invalid="false">
+                    </div>
+                    <div class="row">
+                        <input name="password" type="password" placeholder="密码" data-vv-id="_24xqavdzg"
+                            aria-required="true" aria-invalid="false">
+                    </div>
+                    <input type="submit" value="登录" class="submit-button">
+                </form>
             </div>
         </div>
         <footer>
@@ -72,3 +52,5 @@
         </footer>
     </div>
 </body>
+
+</html>
