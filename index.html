@@ -9,62 +9,43 @@
     <title>LambdaOJ2</title>
     <link href="assets/css/app.css" rel="stylesheet">
     <link href="assets/css/vue.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 </head>
 
-<body>
+<body ng-app="myApp">
     <div id="app">
         <header class="header">
             <nav class="inner">
-                <a class="router-link-exact-active router-link-active" href="/index.html">
+                <a class="router-link-exact-active router-link-active" href="#/!">
                     <img class="logo" src="https://cdn.jsdelivr.net/gh/Panxuc/FakeLambdaOJ2@latest/assets/img/logo.png">
                 </a>
                 <span class="nav-item-left">首页</span>
                 <div class="nav-items">
-                    <a class="nav-item" href="/faq.html">FAQ</a>
-                    <a class="nav-item" href="/login.html">登录</a>
+                    <a class="nav-item" href="#!faq">FAQ</a>
+                    <a class="nav-item" href="#!login">登录</a>
                 </div>
             </nav>
         </header>
-        <div class="content-wrapper index">
-            <div class="logo-wrapper">
-                <img src="https://cdn.jsdelivr.net/gh/Panxuc/FakeLambdaOJ2@latest/assets/img/logo_long.png"
-                    class="logo-long">
-            </div>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>题目</th>
-                            <th>通过率</th>
-                            <th>截止日期</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <a href="/login.html" class="">1001</a>
-                            </td>
-                            <td>
-                                <a href="/login.html" class="">A + B Problem</a>
-                            </td>
-                            <td>10.66%</td>
-                            <td>2017-10-10 23:59:00</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="/login.html" class="">1002</a>
-                            </td>
-                            <td>
-                                <a href="/login.html" class="">The Nth Number in Fibonacci Sequence</a>
-                            </td>
-                            <td>11.11%</td>
-                            <td>2017-09-22 23:59:00</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+
+        <div ng-view></div>
+
+        <script>
+            const app = angular.module("myApp", ["ngRoute"]);
+            app.config(function ($routeProvider) {
+                $routeProvider
+                    .when("/", {
+                        templateUrl: "main.html"
+                    })
+                    .when("/faq", {
+                        templateUrl: "faq.html"
+                    })
+                    .when("/login", {
+                        templateUrl: "login.html"
+                    });
+            });
+        </script>
+
         <footer>
             <span>此网站仅供娱乐，并非清华大学电子工程系“数据与算法”课程使用的OJ平台！</span>
             <span>Copyright © 2023 Xuc Pan.</span>
