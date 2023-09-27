@@ -1,0 +1,179 @@
+.svg-icon {
+    display: inline-block;
+    fill: currentColor
+}
+
+.svg-icon.flip-horizontal {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1)
+}
+
+.svg-icon.flip-vertical {
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1)
+}
+
+.svg-icon.spin {
+    -webkit-animation: fa-spin 1s 0s infinite linear;
+    animation: fa-spin 1s 0s infinite linear
+}
+
+@-webkit-keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%
+}
+
+* {
+    box-sizing: border-box
+}
+
+a {
+    color: #5cb85c
+}
+
+a,
+a:hover {
+    text-decoration: none
+}
+
+a:hover {
+    color: #55a955
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both
+}
+
+.bold {
+    font-weight: 600
+}
+
+.small {
+    font-size: 90%
+}
+
+.large {
+    font-size: 110%
+}
+
+.content-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: \\5FAE\8F6F\96C5\9ED1, Microsoft Yahei, Avenir, Helvetica, Arial, sans-serif
+}
+
+@media only screen and (max-width:960px) {
+    .content-wrapper {
+        min-width: 960px
+    }
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    min-height: 100%;
+    position: relative
+}
+
+#app header {
+    width: 100%;
+    height: 60px;
+    background-color: #39424e
+}
+
+#app header .inner {
+    width: 920px;
+    margin: 0 auto
+}
+
+#app header .inner .logo {
+    color: hsla(0, 0%, 100%, .8);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 60px;
+    margin-top: 10px;
+    float: left
+}
+
+#app header .inner .logo:hover {
+    cursor: pointer;
+    font-weight: 700
+}
+
+#app header .inner .nav-item-left {
+    color: hsla(0, 0%, 100%, .8);
+    display: inline-block;
+    height: 60px;
+    padding-left: 20px;
+    line-height: 60px
+}
+
+#app header .inner .nav-item-left:hover {
+    cursor: pointer;
+    font-weight: 700
+}
+
+#app header .inner .nav-items {
+    float: right;
+    height: 60px;
+    line-height: 60px
+}
+
+#app header .inner .nav-items .nav-item {
+    color: hsla(0, 0%, 100%, .8);
+    display: inline-block;
+    padding-left: 20px;
+    text-align: right;
+    height: 60px;
+    line-height: 60px
+}
+
+#app header .inner .nav-items .nav-item:hover {
+    cursor: pointer;
+    font-weight: 700
+}
+
+#app footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 80%;
+    color: #666
+}
